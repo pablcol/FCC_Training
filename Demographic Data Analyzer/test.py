@@ -24,3 +24,6 @@ df = pd.read_csv('adult.data.csv')
 # lower_education_rich = round(lower_education.loc[lower_education['salary'] == ">50K"].size
 #                              / lower_education.size * 100, 1,)
 # print(lower_education_rich)
+
+# min_work_hours = df['hours-per-week'].min()
+# print(min_work_hours)
