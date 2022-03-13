@@ -31,3 +31,28 @@ df = pd.read_csv('adult.data.csv')
 
 # min_work_hours = df['hours-per-week'].min()
 # print(min_work_hours)
+
+# num_min_workers = df.loc[df['hours-per-week'] == min_work_hours]
+# rich_percentage = round(
+#     num_min_workers.loc[num_min_workers['salary'] == ">50K"].size
+#     / num_min_workers.size * 100, 1, )
+# print(rich_percentage)
+
+'''highest_country = (
+    df[['salary', 'native-country']]
+    .groupby('native-country')
+    .apply(lambda g: g.loc[g["salary"] == ">50K"].size / g.size * 100)
+)
+
+highest_earning_country = highest_country.idxmax()
+
+
+highest_earning_country_percentage = round(highest_country.max(), 1)
+print(highest_earning_country_percentage)
+'''
+
+'''top_IN_occupation = (
+    df.loc[(df['native-country'] == 'India') & (df['salary'] == '>50K')][
+        'occupation'].value_counts().idxmax())
+print(top_IN_occupation)
+'''
