@@ -8,21 +8,25 @@ df = pd.read_csv('adult.data.csv')
 # average_age_men = (df.groupby('sex')['age'].mean())['Male']
 # print(avg_age_men)
 
-# percentage_bachelors = round(((df['education'].value_counts().Bachelors / df['education'].count()) * 100), 1)
+# percentage_bachelors = round(((df['education'].value_counts().Bachelors /
+#                                df['education'].count()) * 100), 1)
 # print(percentage_bachelors)
 
-# higher_education = df.loc[df['education'].isin(['Bachelors', 'Masters', 'Doctorate'])]
-# print(higher_education.count)
-
-# lower_education = df.loc[~df['education'].isin(['Bachelors', 'Masters', 'Doctorate'])]
+# higher_education = df.loc[df['education'].isin(['Bachelors', 'Masters',
+#                                                 'Doctorate'])]
+# print(higher_education)
+# lower_education = df.loc[~df['education'].isin(['Bachelors', 'Masters',
+#                                                 'Doctorate'])]
 # print(lower_education)
 
-# higher_education_rich = round(higher_education.loc[higher_education['salary'] == ">50K"].size
-#                               / higher_education.size * 100, 1,)
+# higher_education_rich = round(
+#     higher_education.loc[higher_education['salary'] == ">50K"].size
+#     / higher_education.size * 100, 1, )
 # print(higher_education_rich)
 
-# lower_education_rich = round(lower_education.loc[lower_education['salary'] == ">50K"].size
-#                              / lower_education.size * 100, 1,)
+# lower_education_rich = round(
+#     lower_education.loc[lower_education['salary'] == ">50K"].size
+#    / lower_education.size * 100, 1, )
 # print(lower_education_rich)
 
 # min_work_hours = df['hours-per-week'].min()
