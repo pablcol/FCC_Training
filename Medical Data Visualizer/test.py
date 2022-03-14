@@ -17,3 +17,10 @@ print(df['cholesterol'])
 df['gluc'] = np.where(df['gluc'] == 1, 0, 1)
 print(df['gluc'])
 '''
+
+variables = sorted(
+    ['cholesterol', 'gluc', 'smoke', 'alco', 'active', 'overweight'])
+
+df_cat = pd.melt(df, id_vars=['cardio'], value_vars=variables)
+
+df_cat = df_cat.value_counts().reset_index(name='total')
